@@ -93,4 +93,4 @@ Sau khi chạy xong, dữ liệu được lưu vào:
 
 ## License
 
-MIT
+[MIT](LICENSE)
