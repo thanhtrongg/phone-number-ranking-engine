@@ -2,16 +2,49 @@
 
 Công cụ crawl và chấm điểm số đẹp từ các nhà mạng Việt Nam (Mobifone & Viettel).
 
-## Các script
+## Cách 1: Dùng Extension (Khuyên dùng)
+
+### Cài đặt
+
+1. Mở Chrome, vào `chrome://extensions`
+2. Bật **Developer mode** (góc phải trên)
+3. Chọn **Load unpacked** → chọn thư mục `extension/` trong project
+4. Icon extension xuất hiện trên thanh toolbar
+
+### Sử dụng
+
+1. Vào trang web của Mobifone (VD: `khosim.mobifone.vn`) hoặc Viettel (`viettel.vn`)
+2. Click icon extension → extension tự động phát hiện nhà mạng
+3. Nhập đầu số muốn quét (hoặc để mặc định)
+4. Click **"Chạy Mobifone"** hoặc **"Chạy Viettel"**
+5. Script chạy tự động, kết quả hiện trong console
+
+Extension tự động lưu đầu số bạn đã nhập.
+
+## Cách 2: Copy code vào DevTools
+
+### Mobifone
+
+1. Mở DevTools (F12) → tab **Console**
+2. Copy nội dung file [`simsodepmobi.js`](simsodepmobi.js)
+3. Dán vào console và Enter
+4. Chờ script crawl xong, kết quả hiện trong console + tự động tải CSV
+
+### Viettel
+
+1. Mở DevTools (F12) → tab **Console**
+2. Copy nội dung file [`simsodepviettel.js`](simsodepviettel.js)
+3. Dán vào console và Enter
+4. Chờ script crawl xong, kết quả hiện trong console + tự động tải CSV
+
+## Script
 
 | File | Nhà mạng | API |
 |------|----------|-----|
 | `simsodepmobi.js` | Mobifone | `khosim.mobifone.vn` |
 | `simsodepviettel.js` | Viettel | `apigami.viettel.vn` |
 
-## Cách dùng
-
-Mở từng file trong browser console (hoặc dùng DevTools) và chạy. Script sẽ:
+Script sẽ:
 
 1. Gọi API lấy danh sách sim theo đầu số
 2. Chấm điểm từng số dựa trên các tiêu chí số đẹp
@@ -21,6 +54,8 @@ Mở từng file trong browser console (hoặc dùng DevTools) và chạy. Scrip
 4. Copy danh sách số đẹp vào clipboard
 
 ## Cấu hình
+
+Có thể chỉnh sửa trực tiếp trong file script hoặc qua extension.
 
 ### Mobifone (`simsodepmobi.js`)
 
