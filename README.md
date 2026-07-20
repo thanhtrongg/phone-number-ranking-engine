@@ -99,6 +99,8 @@ Script chấm điểm dựa trên các tiêu chí của số đẹp Việt Nam:
 | Sảnh tiến 6 số | 130 | 180 |
 | Sảnh tiến 5 số | 100 | 150 |
 | Sảnh tiến 4 số | 75 | 115 |
+| Sảnh lùi 6 số | 90 | 115 |
+| Sảnh lùi 5 số | 65 | 90 |
 | Đuôi lộc phát (68, 86) | 55 | 60 |
 | Đuôi thần tài (39, 79) | 50 | 55 |
 | Đuôi ông địa (38, 78) | 45 | 45 |
@@ -111,7 +113,21 @@ Script chấm điểm dựa trên các tiêu chí của số đẹp Việt Nam:
 | Đuôi dạng AA-BBB (vd 77666) | 105 | 145 |
 | Đuôi dạng AAA-BB (vd 88822) | 105 | 145 |
 | Đuôi dạng AAA-BBB (vd 888666) | 130 | 175 |
-| 8 số cuối <= 3 chữ số khác nhau | 65 | 80 |
+| 8 số cuối ≤ 3 chữ số khác nhau | 65 | 80 |
+| 3 cặp lặp cuối (ababab) | 95 | 105 |
+| Lặp cặp cuối (abab) | 70 | 80 |
+| Đuôi ABC-ABC | 90 | - |
+| Đuôi AB-CD-AB | 65 | - |
+| Đuôi kép đẹp (88, 99, 66) | 40 | 45 |
+| Tam hoa sát cuối | 45 | - |
+| Cụm 5 số giống nhau trong đuôi | 100 | 125 |
+| Cụm 4 số giống nhau trong đuôi | 80 | 105 |
+| Cụm 3 số giống nhau trong đuôi | 55 | 65 |
+| Ngũ quý nằm trong đuôi | 100 | 120 |
+| Tứ quý nằm trong đuôi | 80 | 100 |
+| Tam hoa nằm trong đuôi | 60 | 70 |
+| Combo lộc phát + tam hoa | 45 | 55 |
+| Combo cặp đẹp + tam hoa | 40 | 50 |
 
 ### Tiêu chí trừ điểm
 
