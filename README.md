@@ -116,10 +116,12 @@ Script chấm điểm dựa trên các tiêu chí của số đẹp Việt Nam:
 | 8 số cuối ≤ 3 chữ số khác nhau | 65 | 80 |
 | 3 cặp lặp cuối (ababab) | 95 | 105 |
 | Lặp cặp cuối (abab) | 70 | 80 |
-| Đuôi ABC-ABC | 90 | - |
-| Đuôi AB-CD-AB | 65 | - |
+| Đuôi ABC-ABC | 90 | 100 |
+| Đuôi AB-CD-AB | 65 | 75 |
+| Đuôi AB-AB | 60 | 70 |
 | Đuôi kép đẹp (88, 99, 66) | 40 | 45 |
-| Tam hoa sát cuối | 45 | - |
+| Tam hoa sát cuối | 45 | 55 |
+| Tam hoa gần cuối | 35 | 40 |
 | Cụm 5 số giống nhau trong đuôi | 100 | 125 |
 | Cụm 4 số giống nhau trong đuôi | 80 | 105 |
 | Cụm 3 số giống nhau trong đuôi | 55 | 65 |
@@ -128,6 +130,11 @@ Script chấm điểm dựa trên các tiêu chí của số đẹp Việt Nam:
 | Tam hoa nằm trong đuôi | 60 | 70 |
 | Combo lộc phát + tam hoa | 45 | 55 |
 | Combo cặp đẹp + tam hoa | 40 | 50 |
+| Combo 86 và 555 | 50 | 55 |
+| Combo 68 và 888 | 50 | 55 |
+| Combo 79 và 999 | 50 | 55 |
+| Có cặp kép trong đuôi | 20 | 25 |
+| Có cặp đẹp trong đuôi | 18 | 20 |
 
 ### Tiêu chí trừ điểm
 

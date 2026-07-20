@@ -387,6 +387,12 @@
       add(75, "combo tam hoa + cặp kép");
     }
 
+    // Tam hoa gần cuối
+    if (/(\d)\1{2}\d$/.test(last4)) add(55, "tam hoa sát cuối");
+    if (/(\d)\1{2}\d{1,2}$/.test(last5) || /(\d)\1{2}\d{1,3}$/.test(last6)) {
+      add(40, "tam hoa gần cuối");
+    }
+
     // Gánh
     if (/(\d)(\d)(\d)\3\2\1$/.test(p)) add(120, "gánh 6 số cuối");
     else if (/(\d)(\d)(\d)\2\1$/.test(p)) add(95, "gánh 5 số cuối");
@@ -404,6 +410,8 @@
     if (/(\d)\1(\d)\2(\d)\3$/.test(p)) add(105, "3 cặp kép cuối");
     else if (/(\d)\1(\d)\2$/.test(p)) add(70, "2 cặp kép cuối");
 
+    if (/(\d)\1/.test(last7)) add(25, "có cặp kép trong đuôi");
+
     // Cặp đẹp
     if (["68", "86"].includes(last2)) add(60, "lộc phát cuối");
     if (["39", "79"].includes(last2)) add(55, "thần tài cuối");
@@ -413,6 +421,19 @@
     if (/(68|86)/.test(last8)) add(35, "có lộc phát trong đuôi");
     if (/(39|79)/.test(last8)) add(30, "có thần tài trong đuôi");
     if (/(38|78)/.test(last8)) add(25, "có ông địa trong đuôi");
+
+    // ABAB / ABCABC
+    if (/(\d{3})\1$/.test(last6)) add(100, "đuôi ABC-ABC");
+    if (/(\d{2})(\d{2})\1$/.test(last6)) add(75, "đuôi AB-CD-AB");
+    if (/(\d{2})\1$/.test(last4)) add(70, "đuôi AB-AB");
+
+    // Có cặp đẹp trong đuôi
+    const nicePairs = ["66", "88", "99", "55", "22", "33", "77", "11"];
+    nicePairs.forEach((pair) => {
+      if (last7.includes(pair)) {
+        add(20, `có cặp ${pair} trong đuôi`);
+      }
+    });
 
     // Dễ nhớ vì ít chữ số
     const uniqueLast6 = new Set(last6).size;
@@ -434,6 +455,16 @@
       /(\d)\1{2}.*(11|22|33|55|66|77|88|99)/.test(last8)
     ) {
       add(50, "combo cặp đẹp + tam hoa");
+    }
+
+    if (/86.*555/.test(last8) || /555.*86/.test(last8)) {
+      add(55, "combo 86 và 555");
+    }
+    if (/68.*888/.test(last8) || /888.*68/.test(last8)) {
+      add(55, "combo 68 và 888");
+    }
+    if (/79.*999/.test(last8) || /999.*79/.test(last8)) {
+      add(55, "combo 79 và 999");
     }
 
     if (["49", "53"].includes(last2)) {
