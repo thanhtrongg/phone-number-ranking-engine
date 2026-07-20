@@ -90,57 +90,57 @@ Script chấm điểm dựa trên các tiêu chí của số đẹp Việt Nam:
 
 ### Tiêu chí cộng điểm
 
-| Tiêu chí | Điểm (Mobi) | Điểm (Viettel) |
-|----------|:-----------:|:--------------:|
-| Lục quý cuối (6 số giống nhau) | 180 | 210 |
-| Ngũ quý cuối | 140 | 180 |
-| Tứ quý cuối | 105 | 155 |
-| Tam hoa cuối | 80 | 95 |
-| Sảnh tiến 6 số | 130 | 180 |
-| Sảnh tiến 5 số | 100 | 150 |
-| Sảnh tiến 4 số | 75 | 115 |
-| Sảnh lùi 6 số | 90 | 115 |
-| Sảnh lùi 5 số | 65 | 90 |
-| Đuôi lộc phát (68, 86) | 55 | 60 |
-| Đuôi thần tài (39, 79) | 50 | 55 |
-| Đuôi ông địa (38, 78) | 45 | 45 |
-| Lặp bộ 3 cuối (abcabc) | 105 | 120 |
-| Gánh 6 số cuối | 110 | 120 |
-| Gánh 5 số cuối | 85 | 95 |
-| Gánh 4 số cuối | 65 | 70 |
-| 3 cặp kép cuối (aabbcc) | 95 | 105 |
-| 2 cặp kép cuối (aabb) | 60 | 70 |
-| Đuôi dạng AA-BBB (vd 77666) | 105 | 145 |
-| Đuôi dạng AAA-BB (vd 88822) | 105 | 145 |
-| Đuôi dạng AAA-BBB (vd 888666) | 130 | 175 |
-| 8 số cuối ≤ 3 chữ số khác nhau | 65 | 80 |
-| 3 cặp lặp cuối (ababab) | 95 | 105 |
-| Lặp cặp cuối (abab) | 70 | 80 |
-| Đuôi ABC-ABC | 90 | 100 |
-| Đuôi AB-CD-AB | 65 | 75 |
-| Đuôi AB-AB | 60 | 70 |
-| Đuôi kép đẹp (88, 99, 66) | 40 | 45 |
-| Tam hoa sát cuối | 45 | 55 |
-| Tam hoa gần cuối | 35 | 40 |
-| Cụm 5 số giống nhau trong đuôi | 100 | 125 |
-| Cụm 4 số giống nhau trong đuôi | 80 | 105 |
-| Cụm 3 số giống nhau trong đuôi | 55 | 65 |
-| Ngũ quý nằm trong đuôi | 100 | 120 |
-| Tứ quý nằm trong đuôi | 80 | 100 |
-| Tam hoa nằm trong đuôi | 60 | 70 |
-| Combo lộc phát + tam hoa | 45 | 55 |
-| Combo cặp đẹp + tam hoa | 40 | 50 |
-| Combo 86 và 555 | 50 | 55 |
-| Combo 68 và 888 | 50 | 55 |
-| Combo 79 và 999 | 50 | 55 |
-| Có cặp kép trong đuôi | 20 | 25 |
-| Có cặp đẹp trong đuôi | 18 | 20 |
+| Tiêu chí | Điểm |
+|----------|:----:|
+| Lục quý cuối (6 số giống nhau) | 180 |
+| Ngũ quý cuối | 140 |
+| Tứ quý cuối | 105 |
+| Tam hoa cuối | 80 |
+| Sảnh tiến 6 số | 130 |
+| Sảnh tiến 5 số | 100 |
+| Sảnh tiến 4 số | 75 |
+| Sảnh lùi 6 số | 90 |
+| Sảnh lùi 5 số | 65 |
+| Đuôi lộc phát (68, 86) | 55 |
+| Đuôi thần tài (39, 79) | 50 |
+| Đuôi ông địa (38, 78) | 45 |
+| Lặp bộ 3 cuối (abcabc) | 105 |
+| Gánh 6 số cuối | 110 |
+| Gánh 5 số cuối | 85 |
+| Gánh 4 số cuối | 65 |
+| 3 cặp kép cuối (aabbcc) | 95 |
+| 2 cặp kép cuối (aabb) | 60 |
+| Đuôi dạng AA-BBB (vd 77666) | 105 |
+| Đuôi dạng AAA-BB (vd 88822) | 105 |
+| Đuôi dạng AAA-BBB (vd 888666) | 130 |
+| 8 số cuối ≤ 3 chữ số khác nhau | 65 |
+| 3 cặp lặp cuối (ababab) | 95 |
+| Lặp cặp cuối (abab) | 70 |
+| Đuôi ABC-ABC | 90 |
+| Đuôi AB-CD-AB | 65 |
+| Đuôi AB-AB | 60 |
+| Đuôi kép đẹp (88, 99, 66) | 40 |
+| Tam hoa sát cuối | 45 |
+| Tam hoa gần cuối | 35 |
+| Cụm 5 số giống nhau trong đuôi | 100 |
+| Cụm 4 số giống nhau trong đuôi | 80 |
+| Cụm 3 số giống nhau trong đuôi | 55 |
+| Ngũ quý nằm trong đuôi | 100 |
+| Tứ quý nằm trong đuôi | 80 |
+| Tam hoa nằm trong đuôi | 60 |
+| Combo lộc phát + tam hoa | 45 |
+| Combo cặp đẹp + tam hoa | 40 |
+| Combo 86 và 555 | 50 |
+| Combo 68 và 888 | 50 |
+| Combo 79 và 999 | 50 |
+| Có cặp kép trong đuôi | 20 |
+| Có cặp đẹp trong đuôi | 18 |
 
 ### Tiêu chí trừ điểm
 
-| Tiêu chí | Điểm (Mobi) | Điểm (Viettel) |
-|----------|:-----------:|:--------------:|
-| Đuôi 49 hoặc 53 | -35 | -45 |
+| Tiêu chí | Điểm |
+|----------|:----:|
+| Đuôi 49 hoặc 53 | -35 |
 
 ## Output
 

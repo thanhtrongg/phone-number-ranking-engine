@@ -334,26 +334,26 @@
     }
 
     // Sảnh tiến, ưu tiên cao
-    if (isIncreasing(last6)) add(180, "sảnh tiến 6 số cuối");
-    else if (isIncreasing(last5)) add(150, "sảnh tiến 5 số cuối");
-    else if (isIncreasing(last4)) add(115, "sảnh tiến 4 số cuối");
-    else if (isIncreasing(last3)) add(65, "sảnh tiến 3 số cuối");
+    if (isIncreasing(last6)) add(130, "sảnh tiến 6 số cuối");
+    else if (isIncreasing(last5)) add(100, "sảnh tiến 5 số cuối");
+    else if (isIncreasing(last4)) add(75, "sảnh tiến 4 số cuối");
+    else if (isIncreasing(last3)) add(45, "sảnh tiến 3 số cuối");
 
     // Sảnh lùi
-    if (isDecreasing(last6)) add(115, "sảnh lùi 6 số cuối");
-    else if (isDecreasing(last5)) add(90, "sảnh lùi 5 số cuối");
-    else if (isDecreasing(last4)) add(65, "sảnh lùi 4 số cuối");
+    if (isDecreasing(last6)) add(90, "sảnh lùi 6 số cuối");
+    else if (isDecreasing(last5)) add(65, "sảnh lùi 5 số cuối");
+    else if (isDecreasing(last4)) add(40, "sảnh lùi 4 số cuối");
 
     // Quý, hoa cuối
-    if (/(\d)\1{5}$/.test(p)) add(210, "lục quý cuối");
-    else if (/(\d)\1{4}$/.test(p)) add(180, "ngũ quý cuối");
-    else if (/(\d)\1{3}$/.test(p)) add(155, "tứ quý cuối");
-    else if (/(\d)\1{2}$/.test(p)) add(95, "tam hoa cuối");
+    if (/(\d)\1{5}$/.test(p)) add(180, "lục quý cuối");
+    else if (/(\d)\1{4}$/.test(p)) add(140, "ngũ quý cuối");
+    else if (/(\d)\1{3}$/.test(p)) add(105, "tứ quý cuối");
+    else if (/(\d)\1{2}$/.test(p)) add(80, "tam hoa cuối");
 
     // Quý, hoa trong đuôi
-    if (/(\d)\1{4}/.test(last8)) add(120, "ngũ quý trong đuôi");
-    else if (/(\d)\1{3}/.test(last8)) add(100, "tứ quý trong đuôi");
-    else if (/(\d)\1{2}/.test(last8)) add(70, "tam hoa trong đuôi");
+    if (/(\d)\1{4}/.test(last8)) add(100, "ngũ quý trong đuôi");
+    else if (/(\d)\1{3}/.test(last8)) add(80, "tứ quý trong đuôi");
+    else if (/(\d)\1{2}/.test(last8)) add(60, "tam hoa trong đuôi");
 
     // AABBB, AAABB, 77666, 22111, 88822
     const blockTags = [
@@ -363,75 +363,75 @@
     ];
 
     [...new Set(blockTags)].forEach((tag) => {
-      if (tag === "đuôi AA-BBB") add(145, tag);
-      else if (tag === "đuôi AAA-BB") add(145, tag);
-      else if (tag === "đuôi AAA-BBB") add(175, tag);
-      else if (tag === "đuôi AA-BBBB") add(165, tag);
-      else if (tag === "đuôi AAAA-BB") add(165, tag);
-      else if (tag === "đuôi AA-BB") add(85, tag);
+      if (tag === "đuôi AA-BBB") add(105, tag);
+      else if (tag === "đuôi AAA-BB") add(105, tag);
+      else if (tag === "đuôi AAA-BBB") add(130, tag);
+      else if (tag === "đuôi AA-BBBB") add(125, tag);
+      else if (tag === "đuôi AAAA-BB") add(125, tag);
+      else if (tag === "đuôi AA-BB") add(70, tag);
     });
 
     // Cụm giống nhau trong 8 số cuối
     const runs = getRuns(last8);
     const maxRun = runs.reduce((max, run) => Math.max(max, run.length), 0);
 
-    if (maxRun >= 5) add(125, "cụm 5 số giống nhau trong đuôi");
-    else if (maxRun === 4) add(105, "cụm 4 số giống nhau trong đuôi");
-    else if (maxRun === 3) add(65, "cụm 3 số giống nhau trong đuôi");
+    if (maxRun >= 5) add(100, "cụm 5 số giống nhau trong đuôi");
+    else if (maxRun === 4) add(80, "cụm 4 số giống nhau trong đuôi");
+    else if (maxRun === 3) add(55, "cụm 3 số giống nhau trong đuôi");
 
     if (
       runs.some((r) => r.length >= 3) &&
       runs.some((r) => r.length >= 2) &&
       runs.length >= 2
     ) {
-      add(75, "combo tam hoa + cặp kép");
+      add(60, "combo tam hoa + cặp kép");
     }
 
     // Tam hoa gần cuối
-    if (/(\d)\1{2}\d$/.test(last4)) add(55, "tam hoa sát cuối");
+    if (/(\d)\1{2}\d$/.test(last4)) add(45, "tam hoa sát cuối");
     if (/(\d)\1{2}\d{1,2}$/.test(last5) || /(\d)\1{2}\d{1,3}$/.test(last6)) {
-      add(40, "tam hoa gần cuối");
+      add(35, "tam hoa gần cuối");
     }
 
     // Gánh
-    if (/(\d)(\d)(\d)\3\2\1$/.test(p)) add(120, "gánh 6 số cuối");
-    else if (/(\d)(\d)(\d)\2\1$/.test(p)) add(95, "gánh 5 số cuối");
-    else if (/(\d)(\d)\2\1$/.test(p)) add(70, "gánh 4 số cuối");
+    if (/(\d)(\d)(\d)\3\2\1$/.test(p)) add(110, "gánh 6 số cuối");
+    else if (/(\d)(\d)(\d)\2\1$/.test(p)) add(85, "gánh 5 số cuối");
+    else if (/(\d)(\d)\2\1$/.test(p)) add(65, "gánh 4 số cuối");
 
     // Lặp cụm
-    if (/(\d{3})\1$/.test(p)) add(120, "lặp bộ 3 cuối");
-    else if (/(\d{2})\1\1$/.test(p)) add(105, "3 cặp lặp cuối");
-    else if (/(\d{2})\1$/.test(p)) add(80, "lặp cặp cuối");
+    if (/(\d{3})\1$/.test(p)) add(105, "lặp bộ 3 cuối");
+    else if (/(\d{2})\1\1$/.test(p)) add(95, "3 cặp lặp cuối");
+    else if (/(\d{2})\1$/.test(p)) add(70, "lặp cặp cuối");
 
-    if (/(\d{3})\1/.test(last8)) add(85, "lặp bộ 3 trong đuôi");
-    else if (/(\d{2})\1/.test(last8)) add(55, "lặp cặp trong đuôi");
+    if (/(\d{3})\1/.test(last8)) add(70, "lặp bộ 3 trong đuôi");
+    else if (/(\d{2})\1/.test(last8)) add(45, "lặp cặp trong đuôi");
 
     // Cặp kép cuối
-    if (/(\d)\1(\d)\2(\d)\3$/.test(p)) add(105, "3 cặp kép cuối");
-    else if (/(\d)\1(\d)\2$/.test(p)) add(70, "2 cặp kép cuối");
+    if (/(\d)\1(\d)\2(\d)\3$/.test(p)) add(95, "3 cặp kép cuối");
+    else if (/(\d)\1(\d)\2$/.test(p)) add(60, "2 cặp kép cuối");
 
-    if (/(\d)\1/.test(last7)) add(25, "có cặp kép trong đuôi");
+    if (/(\d)\1/.test(last7)) add(20, "có cặp kép trong đuôi");
 
     // Cặp đẹp
-    if (["68", "86"].includes(last2)) add(60, "lộc phát cuối");
-    if (["39", "79"].includes(last2)) add(55, "thần tài cuối");
+    if (["68", "86"].includes(last2)) add(55, "lộc phát cuối");
+    if (["39", "79"].includes(last2)) add(50, "thần tài cuối");
     if (["38", "78"].includes(last2)) add(45, "ông địa cuối");
-    if (["88", "99", "66"].includes(last2)) add(45, "đuôi kép đẹp");
+    if (["88", "99", "66"].includes(last2)) add(40, "đuôi kép đẹp");
 
-    if (/(68|86)/.test(last8)) add(35, "có lộc phát trong đuôi");
-    if (/(39|79)/.test(last8)) add(30, "có thần tài trong đuôi");
+    if (/(68|86)/.test(last8)) add(30, "có lộc phát trong đuôi");
+    if (/(39|79)/.test(last8)) add(28, "có thần tài trong đuôi");
     if (/(38|78)/.test(last8)) add(25, "có ông địa trong đuôi");
 
     // ABAB / ABCABC
-    if (/(\d{3})\1$/.test(last6)) add(100, "đuôi ABC-ABC");
-    if (/(\d{2})(\d{2})\1$/.test(last6)) add(75, "đuôi AB-CD-AB");
-    if (/(\d{2})\1$/.test(last4)) add(70, "đuôi AB-AB");
+    if (/(\d{3})\1$/.test(last6)) add(90, "đuôi ABC-ABC");
+    if (/(\d{2})(\d{2})\1$/.test(last6)) add(65, "đuôi AB-CD-AB");
+    if (/(\d{2})\1$/.test(last4)) add(60, "đuôi AB-AB");
 
     // Có cặp đẹp trong đuôi
     const nicePairs = ["66", "88", "99", "55", "22", "33", "77", "11"];
     nicePairs.forEach((pair) => {
       if (last7.includes(pair)) {
-        add(20, `có cặp ${pair} trong đuôi`);
+        add(18, `có cặp ${pair} trong đuôi`);
       }
     });
 
@@ -440,35 +440,35 @@
     const uniqueLast7 = new Set(last7).size;
     const uniqueLast8 = new Set(last8).size;
 
-    if (uniqueLast8 <= 3) add(80, "8 số cuối rất dễ nhớ");
-    else if (uniqueLast7 <= 3) add(65, "7 số cuối dễ nhớ");
-    else if (uniqueLast6 <= 3) add(50, "6 số cuối dễ nhớ");
-    else if (uniqueLast6 <= 4) add(25, "6 số cuối tương đối dễ nhớ");
+    if (uniqueLast8 <= 3) add(65, "8 số cuối rất dễ nhớ");
+    else if (uniqueLast7 <= 3) add(55, "7 số cuối dễ nhớ");
+    else if (uniqueLast6 <= 3) add(40, "6 số cuối dễ nhớ");
+    else if (uniqueLast6 <= 4) add(20, "6 số cuối tương đối dễ nhớ");
 
     // Combo kiểu 86 + 555
     if (/(68|86).*(\d)\2{2}/.test(last8) || /(\d)\1{2}.*(68|86)/.test(last8)) {
-      add(55, "combo lộc phát + tam hoa");
+      add(45, "combo lộc phát + tam hoa");
     }
 
     if (
       /(11|22|33|55|66|77|88|99).*(\d)\2{2}/.test(last8) ||
       /(\d)\1{2}.*(11|22|33|55|66|77|88|99)/.test(last8)
     ) {
-      add(50, "combo cặp đẹp + tam hoa");
+      add(40, "combo cặp đẹp + tam hoa");
     }
 
     if (/86.*555/.test(last8) || /555.*86/.test(last8)) {
-      add(55, "combo 86 và 555");
+      add(50, "combo 86 và 555");
     }
     if (/68.*888/.test(last8) || /888.*68/.test(last8)) {
-      add(55, "combo 68 và 888");
+      add(50, "combo 68 và 888");
     }
     if (/79.*999/.test(last8) || /999.*79/.test(last8)) {
-      add(55, "combo 79 và 999");
+      add(50, "combo 79 và 999");
     }
 
     if (["49", "53"].includes(last2)) {
-      score -= 45;
+      score -= 35;
       tags.push("đuôi dễ bị kiêng");
     }
 
