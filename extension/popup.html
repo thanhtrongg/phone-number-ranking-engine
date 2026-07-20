@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 280px;
+      margin: 0;
+      padding: 14px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+    }
+    h3 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin: 6px 0 3px;
+      font-weight: 600;
+    }
+    input {
+      width: 100%;
+      padding: 6px 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 12px;
+      box-sizing: border-box;
+    }
+    input:focus {
+      outline: none;
+      border-color: #666;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border: none;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #fff;
+    }
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .btn-mobi { background: #e53935; }
+    .btn-viettel { background: #1e88e5; }
+    button:not(:disabled):hover { opacity: 0.85; }
+    #carrier {
+      margin: 8px 0;
+      font-size: 12px;
+      text-align: center;
+      padding: 4px;
+      border-radius: 4px;
+    }
+    .detect-mobi { background: #ffe0e0; color: #c62828; }
+    .detect-viettel { background: #dde8f5; color: #0d47a1; }
+    .detect-none { background: #f5f5f5; color: #999; }
+    #status {
+      margin-top: 8px;
+      font-size: 12px;
+      text-align: center;
+      color: #666;
+    }
+    .note {
+      font-size: 11px;
+      color: #888;
+      margin: 2px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <h3>Phone Number Ranking Engine</h3>
+
+  <label>Đầu số Mobifone</label>
+  <input type="text" id="mobiPrefixes" placeholder="093, 090, 077, 078, 079, 089, 070">
+  <div class="note">Cách nhau bằng dấu phẩy</div>
+
+  <label>Đầu số Viettel</label>
+  <input type="text" id="viettelKeySearches" placeholder="09*, 03*, 08*, 086*">
+  <div class="note">Có thể dùng * ở cuối (09*, 03*)</div>
+
+  <div id="carrier" class="detect-none">Đang phát hiện...</div>
+
+  <button class="btn-mobi" id="runMobi">▶ Chạy Mobifone</button>
+  <button class="btn-viettel" id="runViettel">▶ Chạy Viettel</button>
+
+  <div id="status">Sẵn sàng</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

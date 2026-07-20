@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Phone Number Ranking Engine",
+  "version": "1.0",
+  "description": "Chạy crawler Mobifone / Viettel chỉ với 1 click",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Phone Number Ranking Engine"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["simsodepmobi.js", "simsodepviettel.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
